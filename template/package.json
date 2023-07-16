@@ -82,8 +82,7 @@
     "prettier": "cd src && npx prettier --write . && git add .",
     "prepare": "husky install",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "postinstall": "patch-package"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "engine": {
     "node": "16.10.0",
