@@ -1,2 +1,3 @@
+#!/usr/bin/env node
 
-console.info("Successive RN Stater Kit");
+console.log("This is post init script");
