@@ -1,6 +1,6 @@
 {
   "name": "RNTypescriptBoilerplate",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "React Native Template/Boilerplate",
   "dependencies": {
     "@react-native-community/netinfo": "^9.4.1",
