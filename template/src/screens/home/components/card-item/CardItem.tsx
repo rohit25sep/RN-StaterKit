@@ -1,21 +1,18 @@
 import React, { useMemo } from "react";
 import { View, StyleProp, ViewStyle } from "react-native";
 import { useTheme } from "@react-navigation/native";
-import Icon from "react-native-dynamic-vector-icons";
 /**
  * ? Local Imports
  */
 import createStyles from "./CardItem.style";
-import { ICardItem } from "models";
 import Text from "@shared-components/text-wrapper/TextWrapper";
 import RNBounceable from "lib/bounceable/RNBounceable";
-import { User } from "models/UserModel";
 
 type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
 
 interface ICardItemProps {
   style?: CustomStyleProp;
-  data:any
+  data: any;
   onPress: () => void;
 }
 
@@ -37,10 +34,9 @@ const CardItem: React.FC<ICardItemProps> = ({ style, data, onPress }) => {
   );
 
   return (
-    <RNBounceable style={[styles.container, style]}  onPress={onPress}>
+    <RNBounceable style={[styles.container, style]} onPress={onPress}>
       <Header />
-      <View style={styles.contentContainer}>
-      </View>
+      <View style={styles.contentContainer} />
     </RNBounceable>
   );
 };

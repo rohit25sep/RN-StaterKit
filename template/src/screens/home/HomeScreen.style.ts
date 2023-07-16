@@ -3,7 +3,6 @@ import { ExtendedTheme } from "@react-navigation/native";
 import { ScreenWidth } from "@lib";
 import fonts from "@fonts";
 
-
 interface Style {
   container: ViewStyle;
   titleTextStyle: TextStyle;
@@ -44,8 +43,7 @@ export default (theme: ExtendedTheme) => {
     },
     buttonTextStyle: {
       color: colors.white,
-      fontFamily: fonts.montserrat.lightItalic
-
+      fontFamily: fonts.montserrat.lightItalic,
     },
     header: {
       width: ScreenWidth * 0.9,

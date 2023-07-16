@@ -15,19 +15,13 @@ const ProfileScreen: React.FC<ProfileScreenProps> = () => {
   const { colors } = theme;
   const styles = useMemo(() => createStyles(theme), [theme]);
 
-
-
   return (
     <View style={styles.container}>
       <Text h1 color={colors.text}>
         Profile
       </Text>
-      <View style={styles.userContainer}>
-        
-      </View>
-      <RNBounceable
-        style={styles.userButton}
-      >
+      <View style={styles.userContainer} />
+      <RNBounceable style={styles.userButton}>
         <Text color="#fff">Set User</Text>
       </RNBounceable>
     </View>

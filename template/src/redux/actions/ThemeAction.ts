@@ -1,4 +1,4 @@
-import {SET_APP_THEME} from '../actionConstants';
+import { SET_APP_THEME } from "../actionConstants";
 
 export const setAppTheme = (theme: boolean) => {
   return {

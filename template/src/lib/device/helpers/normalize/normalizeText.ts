@@ -1,5 +1,3 @@
-
-
 import { PixelRatio, Dimensions } from "react-native";
 
 const pixelRatio = PixelRatio.get();

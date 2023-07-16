@@ -19,8 +19,9 @@ const DetailScreen: React.FC<DetailScreenProps> = () => {
   const { colors } = theme;
   const styles = useMemo(() => createStyles(theme), [theme]);
   const dispatch = useDispatch();
-  const isDarkMode  = useSelector((state: RootState) => state.themeReducer.isDarkMode);
-
+  const isDarkMode = useSelector(
+    (state: RootState) => state.themeReducer.isDarkMode,
+  );
 
   return (
     <View style={styles.container}>
@@ -29,14 +30,16 @@ const DetailScreen: React.FC<DetailScreenProps> = () => {
       </Text>
       <RNBounceable
         style={styles.buttonStyle}
-        onPress={() => { 
-          NavigationService.goBack()}}
+        onPress={() => {
+          NavigationService.goBack();
+        }}
       >
         <Text color={colors.white}>Go back to Home</Text>
       </RNBounceable>
       <RNBounceable
         style={styles.buttonStyle}
-        onPress={() =>   dispatch(setAppTheme(!isDarkMode))}  >
+        onPress={() => dispatch(setAppTheme(!isDarkMode))}
+      >
         <Text color={colors.white}>Change Theme</Text>
       </RNBounceable>
     </View>

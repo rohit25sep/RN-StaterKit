@@ -1,6 +1,5 @@
 const Glyphs = {
-    Logo: require('../assets/logo.png'),
-  };
-  
+  Logo: require("../assets/logo.png"),
+};
+
 export default Glyphs;
-  

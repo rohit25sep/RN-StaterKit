@@ -1,3 +1,2 @@
-export * from './device';
-export * from './bounceable/RNBounceable';
-
+export * from "./device";
+export * from "./bounceable/RNBounceable";

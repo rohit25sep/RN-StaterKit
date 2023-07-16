@@ -1,8 +1,8 @@
+import React, { useEffect } from "react";
 import * as NavigationService from "react-navigation-helpers";
 import { SCREENS } from "@shared-constants";
 import HomeScreen from "@screens/home/HomeScreen";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import { RootState } from "redux/store/Store";
 import { IApiResponse } from "controller/IApiResponse";
 import { User } from "models/UserModel";
@@ -16,11 +16,13 @@ const HomeScreenViewModel = () => {
 
   useEffect(() => {
     getUserData();
-  }, [])
+  });
   const getUserData = async () => {
-    const res: IApiResponse<User> = await sendGetRequest<User>(APIConstants.GetUser);
-    dispatch(setAllUsers(res.data))
-  }
+    const res: IApiResponse<User> = await sendGetRequest<User>(
+      APIConstants.GetUser,
+    );
+    dispatch(setAllUsers(res.data));
+  };
   const handleItemPress = () => {
     NavigationService.push(SCREENS.DETAIL);
   };
@@ -30,9 +32,8 @@ const HomeScreenViewModel = () => {
       <HomeScreen
         {...{
           userData,
-          handleItemPress
+          handleItemPress,
         }}
-
       />
     </>
   );

@@ -1,10 +1,7 @@
 export const capitalizeFirstLetter = (str: string) =>
   str && str.length ? str.charAt(0).toUpperCase() + str.slice(1) : str;
 
-export const capitalizeAllStartingWords = (
-  str: string,
-  lower: boolean = false,
-) =>
+export const capitalizeAllStartingWords = (str: string, lower = false) =>
   (lower ? str.toLowerCase() : str).replace(/(?:^|\s|[''({])+\S/g, (match) =>
     match.toUpperCase(),
   );

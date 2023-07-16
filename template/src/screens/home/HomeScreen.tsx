@@ -9,14 +9,12 @@ import Text from "@shared-components/text-wrapper/TextWrapper";
 import fonts from "@fonts";
 import { localStrings } from "shared/localization";
 
-
 interface HomeScreenProps {
-  userData: any
-  handleItemPress : () => void
-
+  userData: any;
+  handleItemPress: () => void;
 }
 
-const HomeScreen =  (props:HomeScreenProps) => {
+const HomeScreen = (props: HomeScreenProps) => {
   const theme = useTheme();
   const { colors } = theme;
   const styles = useMemo(() => createStyles(theme), [theme]);
@@ -35,13 +33,13 @@ const HomeScreen =  (props:HomeScreenProps) => {
   const Welcome = () => (
     <>
       <Text h1 bold color={colors.text}>
-      {localStrings.getString('boilerPlateHeader')}
+        {localStrings.getString("boilerPlateHeader")}
       </Text>
       <Text
         fontFamily={fonts.montserrat.lightItalic}
         color={colors.placeholder}
       >
-        {localStrings.getString('welcomeBack')}
+        {localStrings.getString("welcomeBack")}
       </Text>
     </>
   );

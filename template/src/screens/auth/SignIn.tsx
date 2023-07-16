@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from "react";
 import {
   View,
   Text,
@@ -6,14 +6,14 @@ import {
   TextInput,
   Alert,
   TouchableOpacity,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "@react-navigation/native";
-import { localStrings } from 'shared/localization';
-import Glyphs from 'assets/Glyphs';
+import { localStrings } from "shared/localization";
+import Glyphs from "assets/Glyphs";
 import createStyles from "./styles/SignInStyle";
 import * as NavigationService from "react-navigation-helpers";
-import { SCREENS } from '@shared-constants';
+import { SCREENS } from "@shared-constants";
 
 const SignInScreen = () => {
   const theme = useTheme();
@@ -30,23 +30,29 @@ const SignInScreen = () => {
             <TextInput
               style={styles.input}
               placeholderTextColor={colors.text}
-              placeholder={localStrings.getString('placeholderEmail')}
+              placeholder={localStrings.getString("placeholderEmail")}
             />
             <TextInput
-              style={styles.password} 
+              style={styles.password}
               placeholderTextColor={colors.text}
-              placeholder={localStrings.getString('placeholderPassword')}
+              placeholder={localStrings.getString("placeholderPassword")}
             />
             <Text
               style={styles.forgotPasswordText}
-              onPress={() => Alert.alert('Hi')}>
-              {localStrings.getString('forgotPassword')}
+              onPress={() => Alert.alert("Hi")}
+            >
+              {localStrings.getString("forgotPassword")}
             </Text>
           </View>
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity onPress={() => NavigationService.navigate(SCREENS.HOME)} style={styles.submitButton}>
-            <Text style={styles.submitText}>{localStrings.getString('login')}</Text>
+          <TouchableOpacity
+            onPress={() => NavigationService.navigate(SCREENS.HOME)}
+            style={styles.submitButton}
+          >
+            <Text style={styles.submitText}>
+              {localStrings.getString("login")}
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

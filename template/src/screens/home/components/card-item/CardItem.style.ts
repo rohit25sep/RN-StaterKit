@@ -52,8 +52,7 @@ export default (theme: ExtendedTheme) => {
     },
     valueTextStyle: {
       marginLeft: 8,
-      color:colors.text,
-
+      color: colors.text,
     },
     forkContainer: {
       marginLeft: 16,

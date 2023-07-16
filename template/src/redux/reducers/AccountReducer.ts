@@ -1,8 +1,8 @@
-import {SET_USER_DATA} from '../actionConstants';
+import { SET_USER_DATA } from "../actionConstants";
 
 const INITIAL_STATE = {
   userData: {},
-  loading:true
+  loading: true,
 };
 
 const accountReducer = (state = INITIAL_STATE, action: any) => {

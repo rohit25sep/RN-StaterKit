@@ -1,7 +1,7 @@
-import {SET_APP_THEME} from '../actionConstants';
+import { SET_APP_THEME } from "../actionConstants";
 
 const INITIAL_STATE = {
-  isDarkMode: true ,
+  isDarkMode: true,
 };
 
 const themeReducer = (state = INITIAL_STATE, action: any) => {

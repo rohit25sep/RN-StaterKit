@@ -1,6 +1,7 @@
 import { Dimensions, ScaledSize, Platform, StatusBar } from "react-native";
 const DEFAULT_STATUSBAR_HEIGHT = 30;
 // ? iPhone X Family
+/* eslint-disable camelcase */
 const iPhoneX_HEIGHT = 812;
 const iPhoneXsMax_HEIGHT = 896;
 const iPhoneSE_HEIGHT = 568;

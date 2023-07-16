@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { SCREENS } from "@shared-constants";
 import { LightTheme, DarkTheme, palette } from "@theme/themes";
-import HomeScreenViewModel from '../viewModel/HomeScreenViewModel';
+import HomeScreenViewModel from "../viewModel/HomeScreenViewModel";
 import SearchScreen from "@screens/search/SearchScreen";
 import DetailScreen from "@screens/detail/DetailScreen";
 import ProfileScreen from "@screens/profile/ProfileScreen";
@@ -18,8 +18,9 @@ import SignInViewModel from "viewModel/SignInViewModel";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const Navigation = () => {
-  const isDarkMode  = useSelector((state: RootState) => state.themeReducer.isDarkMode);
-
+  const isDarkMode = useSelector(
+    (state: RootState) => state.themeReducer.isDarkMode,
+  );
 
   React.useEffect((): any => {
     return () => (isReadyRef.current = false);
@@ -86,7 +87,7 @@ const Navigation = () => {
       theme={isDarkMode ? DarkTheme : LightTheme}
     >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name={SCREENS.LOGIN} component={SignInViewModel} />
+        <Stack.Screen name={SCREENS.LOGIN} component={SignInViewModel} />
         <Stack.Screen name={SCREENS.HOME} component={RenderTabNavigation} />
         <Stack.Screen name={SCREENS.DETAIL}>
           {(props) => <DetailScreen {...props} />}
