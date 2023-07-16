@@ -12,9 +12,9 @@ import SearchScreen from "@screens/search/SearchScreen";
 import DetailScreen from "@screens/detail/DetailScreen";
 import ProfileScreen from "@screens/profile/ProfileScreen";
 import NotificationScreen from "@screens/notification/NotificationScreen";
-import SignInViewModel from "../viewModel/SIgninViewModel";
 import { useSelector } from "react-redux";
 import { RootState } from "redux/store/Store";
+import SignInViewModel from "viewModel/SignInViewModel";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const Navigation = () => {
