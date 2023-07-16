@@ -7,7 +7,10 @@ import * as NavigationService from "react-navigation-helpers";
  */
 import createStyles from "./DetailScreen.style";
 import Text from "@shared-components/text-wrapper/TextWrapper";
-import RNBounceable from "@freakycoder/react-native-bounceable";
+import { useDispatch, useSelector } from "react-redux";
+import { setAppTheme } from "redux/actions/ThemeAction";
+import RNBounceable from "lib/bounceable/RNBounceable";
+import { RootState } from "redux/store/Store";
 
 interface DetailScreenProps {}
 
@@ -15,6 +18,9 @@ const DetailScreen: React.FC<DetailScreenProps> = () => {
   const theme = useTheme();
   const { colors } = theme;
   const styles = useMemo(() => createStyles(theme), [theme]);
+  const dispatch = useDispatch();
+  const isDarkMode  = useSelector((state: RootState) => state.themeReducer.isDarkMode);
+
 
   return (
     <View style={styles.container}>
@@ -23,9 +29,15 @@ const DetailScreen: React.FC<DetailScreenProps> = () => {
       </Text>
       <RNBounceable
         style={styles.buttonStyle}
-        onPress={() => NavigationService.goBack()}
+        onPress={() => { 
+          NavigationService.goBack()}}
       >
         <Text color={colors.white}>Go back to Home</Text>
+      </RNBounceable>
+      <RNBounceable
+        style={styles.buttonStyle}
+        onPress={() =>   dispatch(setAppTheme(!isDarkMode))}  >
+        <Text color={colors.white}>Change Theme</Text>
       </RNBounceable>
     </View>
   );

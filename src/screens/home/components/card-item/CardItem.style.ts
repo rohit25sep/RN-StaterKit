@@ -1,5 +1,5 @@
+import { ScreenWidth } from "@lib";
 import { ExtendedTheme } from "@react-navigation/native";
-import { ScreenWidth } from "lib";
 import { ViewStyle, StyleSheet, TextStyle } from "react-native";
 
 interface Style {
@@ -52,6 +52,8 @@ export default (theme: ExtendedTheme) => {
     },
     valueTextStyle: {
       marginLeft: 8,
+      color:colors.text,
+
     },
     forkContainer: {
       marginLeft: 16,

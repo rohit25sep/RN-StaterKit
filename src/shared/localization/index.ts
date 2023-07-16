@@ -1,26 +1,23 @@
 import LocalizedStrings from "react-native-localization";
-
 export const localStrings = new LocalizedStrings({
-  "tr-TR": {
-    noLocationService: "Lokasyon Servisi Kapalı",
-    logout: "Çıkış",
-    yes: "Evet",
-    no: "Hayır",
-    cancel: "İptal",
-    areYouSure: "Emin misiniz?",
-    logoutDesc: "Çıkış yapmak üzeresiniz onaylıyor musunuz?",
-    noInternet: "İnternet Bağlantısı Yok",
+  sp: {
+    boilerPlateHeader: "Caldera RNPlaca",
+    welcomeBack: "Bienvenido de nuevo",
+    login: 'Acceso',
+    forgotPassword: 'Has olvidado tu contraseña',
+    placeholderEmail: 'Correo electrónico',
+    placeholderPassword: 'Contraseña',
   },
   en: {
-    noLocationService: "Location Service Not Available",
-    logout: "Logout",
-    yes: "Yes",
-    no: "No",
-    cancel: "Cancel",
-    areYouSure: "Are you sure?",
-    logoutDesc: "You are about to log out, confirm?",
-    noInternet: "No Internet Connection",
+    boilerPlateHeader: "RN BoilerPlate",
+    welcomeBack: "Welcome Back",
+    login: 'Login',
+    forgotPassword: 'Forgot Password',
+    placeholderEmail: 'Email',
+    placeholderPassword: 'Password',
   },
 });
+
+
 // ? Set the language manually
-localStrings.setLanguage("tr");
+localStrings.setLanguage("en");

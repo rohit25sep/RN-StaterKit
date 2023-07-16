@@ -1,6 +1,8 @@
 import { ViewStyle, StyleSheet, TextStyle, ImageStyle } from "react-native";
 import { ExtendedTheme } from "@react-navigation/native";
-import { ScreenWidth } from "lib";
+import { ScreenWidth } from "@lib";
+import fonts from "@fonts";
+
 
 interface Style {
   container: ViewStyle;
@@ -42,7 +44,8 @@ export default (theme: ExtendedTheme) => {
     },
     buttonTextStyle: {
       color: colors.white,
-      fontWeight: "700",
+      fontFamily: fonts.montserrat.lightItalic
+
     },
     header: {
       width: ScreenWidth * 0.9,

@@ -1,42 +1,32 @@
 import React, { useMemo } from "react";
-import { View, FlatList, Image } from "react-native";
+import { View, FlatList } from "react-native";
 import { useTheme } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import * as NavigationService from "react-navigation-helpers";
-/**
- * ? Local Imports
- */
 import createStyles from "./HomeScreen.style";
-import MockData from "./mock/MockData";
 import CardItem from "./components/card-item/CardItem";
-/**
- * ? Shared Imports
- */
-import { SCREENS } from "@shared-constants";
+
 import Text from "@shared-components/text-wrapper/TextWrapper";
 import fonts from "@fonts";
+import { localStrings } from "shared/localization";
 
-const profileURI =
-  // eslint-disable-next-line max-len
-  "https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80";
 
-interface HomeScreenProps {}
+interface HomeScreenProps {
+  userData: any
+  handleItemPress : () => void
 
-const HomeScreen: React.FC<HomeScreenProps> = () => {
+}
+
+const HomeScreen =  (props:HomeScreenProps) => {
   const theme = useTheme();
   const { colors } = theme;
   const styles = useMemo(() => createStyles(theme), [theme]);
 
-  const handleItemPress = () => {
-    NavigationService.push(SCREENS.DETAIL);
-  };
-
   const List = () => (
     <View style={styles.listContainer}>
       <FlatList
-        data={MockData}
+        data={props.userData.userData}
         renderItem={({ item }) => (
-          <CardItem data={item} onPress={handleItemPress} />
+          <CardItem data={item} onPress={props.handleItemPress} />
         )}
       />
     </View>
@@ -45,13 +35,13 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
   const Welcome = () => (
     <>
       <Text h1 bold color={colors.text}>
-       RN BoilerPlate
+      {localStrings.getString('boilerPlateHeader')}
       </Text>
       <Text
         fontFamily={fonts.montserrat.lightItalic}
         color={colors.placeholder}
       >
-        Welcome Back
+        {localStrings.getString('welcomeBack')}
       </Text>
     </>
   );
