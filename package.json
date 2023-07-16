@@ -1,8 +1,8 @@
 {
-    "name": "react-native-new-template",
-    "version": "0.0.2",
-    "description": "React Native Template",
-    "repository": "git@github.com:rohit25sep/RN-StaterKit.git",
-    "author": "Successive",
-    "license": "MIT"
+  "name": "react-native-new-template",
+  "version": "0.0.5",
+  "description": "React Native Template",
+  "repository": "git@github.com:Esemesek/react-native-new-template.git",
+  "author": "Kacper Wiszczuk <kacperwiszczuk@gmail.com>",
+  "license": "MIT"
 }
