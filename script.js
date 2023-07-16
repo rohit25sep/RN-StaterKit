@@ -1,2 +1,2 @@
 
-console.log("\u0053\u0075\u0063\u0063\u0065\u0073\u0073\u0069\u0076\u0065\u0020\u0052\u004e");
+console.info("Successive RN Stater Kit");
