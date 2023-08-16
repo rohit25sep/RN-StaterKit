@@ -12,7 +12,7 @@ import { useTheme } from "@react-navigation/native";
 import { localStrings } from "shared/localization";
 import Glyphs from "assets/Glyphs";
 import createStyles from "./styles/SignInStyle";
-import * as NavigationService from "react-navigation-helpers";
+import * as NavigationService from "@navigation";
 import { SCREENS } from "@shared-constants";
 
 const SignInScreen = () => {
@@ -55,6 +55,7 @@ const SignInScreen = () => {
             </Text>
           </TouchableOpacity>
         </View>
+       
       </View>
     </SafeAreaView>
   );

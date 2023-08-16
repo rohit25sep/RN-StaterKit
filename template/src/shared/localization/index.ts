@@ -1,4 +1,5 @@
-import LocalizedStrings from "react-native-localization";
+import LocalizedStrings from "react-localization";
+
 export const localStrings = new LocalizedStrings({
   sp: {
     boilerPlateHeader: "Caldera RNPlaca",
@@ -18,5 +19,5 @@ export const localStrings = new LocalizedStrings({
   },
 });
 
-// ? Set the language manually
+
 localStrings.setLanguage("en");

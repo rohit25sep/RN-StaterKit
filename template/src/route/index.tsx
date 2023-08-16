@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "react-native-dynamic-vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { isReadyRef, navigationRef } from "react-navigation-helpers";
+import { isReadyRef, navigationRef } from "@navigation";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { SCREENS } from "@shared-constants";
@@ -15,6 +15,7 @@ import NotificationScreen from "@screens/notification/NotificationScreen";
 import { useSelector } from "react-redux";
 import { RootState } from "redux/store/Store";
 import SignInViewModel from "viewModel/SignInViewModel";
+import { Image } from "react-native";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const Navigation = () => {
@@ -26,32 +27,55 @@ const Navigation = () => {
     return () => (isReadyRef.current = false);
   }, []);
 
-  const renderTabIcon = (
+  // const renderTabIcon = (
+  //   route: any,
+  //   focused: boolean,
+  //   color: string,
+  //   size: number,
+  // ) => {
+  //   let iconName = "home";
+  //   switch (route.name) {
+  //     case SCREENS.HOME:
+  //       iconName = focused ? "home" : "home-outline";
+  //       break;
+  //     case SCREENS.SEARCH:
+  //       iconName = focused ? "search" : "search-outline";
+  //       break;
+  //     case SCREENS.NOTIFICATION:
+  //       iconName = focused ? "notifications" : "notifications-outline";
+  //       break;
+  //     case SCREENS.PROFILE:
+  //       iconName = focused ? "person" : "person-outline";
+  //       break;
+  //     default:
+  //       iconName = focused ? "home" : "home-outline";
+  //       break;
+  //   }
+  //   return <Image source={""} />;
+  // };
+
+  const TabIcon = (    
     route: any,
     focused: boolean,
     color: string,
-    size: number,
-  ) => {
-    let iconName = "home";
-    switch (route.name) {
-      case SCREENS.HOME:
-        iconName = focused ? "home" : "home-outline";
-        break;
-      case SCREENS.SEARCH:
-        iconName = focused ? "search" : "search-outline";
-        break;
-      case SCREENS.NOTIFICATION:
-        iconName = focused ? "notifications" : "notifications-outline";
-        break;
-      case SCREENS.PROFILE:
-        iconName = focused ? "person" : "person-outline";
-        break;
-      default:
-        iconName = focused ? "home" : "home-outline";
-        break;
-    }
-    return <Icon name={iconName} type="Ionicons" size={size} color={color} />;
+    size: number,) => {
+    const get_tabIcon = (route: any) => {
+      switch (route.name) {
+        case SCREENS.HOME:
+          return focused ? <HomeImageBlue /> : <HomeImage />;
+        case SCREENS.SEARCH:
+          return focused ? <ShopImageBlue /> : <ShopImage />;
+        case SCREENS.NOTIFICATION:
+          return focused ? <AccountImageBlue /> : <AccountImage />;
+        case SCREENS.PROFILE:
+          return focused ? <RewardImageBlue /> : <RewardImage />;
+        default:
+          return <></>;
+      }
+    };
+    return get_tabIcon(route.name);
   };
+
 
   const RenderTabNavigation = () => {
     return (
@@ -59,7 +83,7 @@ const Navigation = () => {
         screenOptions={({ route }) => ({
           headerShown: false,
           tabBarIcon: ({ focused, color, size }) =>
-            renderTabIcon(route, focused, color, size),
+          TabIcon(route, focused, color, size),
           tabBarActiveTintColor: palette.primary,
           tabBarInactiveTintColor: "gray",
           tabBarStyle: {

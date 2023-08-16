@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { View } from "react-native";
 import { useTheme } from "@react-navigation/native";
-import * as NavigationService from "react-navigation-helpers";
 /**
  * ? Local Imports
  */
@@ -11,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAppTheme } from "redux/actions/ThemeAction";
 import RNBounceable from "lib/bounceable/RNBounceable";
 import { RootState } from "redux/store/Store";
+import { goBack } from "@navigation";
 
 interface DetailScreenProps {}
 
@@ -31,7 +31,7 @@ const DetailScreen: React.FC<DetailScreenProps> = () => {
       <RNBounceable
         style={styles.buttonStyle}
         onPress={() => {
-          NavigationService.goBack();
+          goBack();
         }}
       >
         <Text color={colors.white}>Go back to Home</Text>
