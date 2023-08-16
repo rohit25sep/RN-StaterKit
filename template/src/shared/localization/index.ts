@@ -8,6 +8,9 @@ export const localStrings = new LocalizedStrings({
     forgotPassword: "Has olvidado tu contraseña",
     placeholderEmail: "Correo electrónico",
     placeholderPassword: "Contraseña",
+    changeTheme:"Cambiar de tema",
+    changeLanguage:"Cambiar idioma"
+
   },
   en: {
     boilerPlateHeader: "RN BoilerPlate",
@@ -16,6 +19,8 @@ export const localStrings = new LocalizedStrings({
     forgotPassword: "Forgot Password",
     placeholderEmail: "Email",
     placeholderPassword: "Password",
+    changeTheme:"Change Theme",
+    changeLanguage:"Change Language"
   },
 });
 

@@ -5,7 +5,7 @@ import { useTheme } from "@react-navigation/native";
  * ? Local Imports
  */
 import createStyles from "./DetailScreen.style";
-import Text from "@shared-components/text-wrapper/TextWrapper";
+import Text from "components/TextWrapper";
 import { useDispatch, useSelector } from "react-redux";
 import { setAppTheme } from "redux/actions/ThemeAction";
 import RNBounceable from "lib/bounceable/RNBounceable";

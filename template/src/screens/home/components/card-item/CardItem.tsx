@@ -5,7 +5,7 @@ import { useTheme } from "@react-navigation/native";
  * ? Local Imports
  */
 import createStyles from "./CardItem.style";
-import Text from "@shared-components/text-wrapper/TextWrapper";
+import Text from "components/TextWrapper";
 import RNBounceable from "lib/bounceable/RNBounceable";
 
 type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;

@@ -24,6 +24,8 @@ export const palette = {
   dynamicBackground: "#fff",
   transparent: "transparent",
   calpyse: "#2b7488",
+  buttonColor:'black',
+  buttonTextColor:'white'
 };
 
 export const LightTheme: ExtendedTheme = {
@@ -47,5 +49,8 @@ export const DarkTheme: ExtendedTheme = {
     dynamicBackground: palette.dynamicBlack,
     shadow: palette.transparent,
     borderColor: palette.borderColorDark,
+    buttonColor: palette.white,
+    buttonTextColor:palette.black
+    
   },
 };

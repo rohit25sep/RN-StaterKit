@@ -5,3 +5,13 @@ export const capitalizeFirstLetter = (str: string) => {
 export const generateRandomNumber = (min: number, max: number) => {
   return Math.floor(min + Math.random() * (max + 1 - min));
 };
+
+export function getTestID(testID: string) {
+  const appPrefix = 'successive';
+  if (!testID) {
+    return 'undefined';
+  }
+  const prefix = `${appPrefix}:id/`;
+  const hasPrefix = testID.startsWith(prefix);
+  return !hasPrefix ? `${prefix}${testID}` : testID;
+}

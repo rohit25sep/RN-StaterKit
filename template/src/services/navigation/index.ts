@@ -48,19 +48,19 @@ export const isReadyRef: RefObject<boolean> = React.createRef<boolean>();
 export const navigationRef = createNavigationContainerRef();
 
 export const navigationListenerProps = {
-  onTransitionEnd: (props, ...args) =>
+  onTransitionEnd: (...args:any) =>
     executeNavigationListeners("transitionEnd", ...args),
-  onTransitionStart: (props, ...args) =>
+  onTransitionStart: (...args:any) =>
     executeNavigationListeners("transitionStart", ...args),
-  onGestureStart: (props, ...args) =>
+  onGestureStart: (...args:any) =>
     executeNavigationListeners("gestureStart", ...args),
-  onGestureEnd: (props, ...args) =>
+  onGestureEnd: (...args:any) =>
     executeNavigationListeners("gestureEnd", ...args),
-  onGestureCancel: (props, ...args) =>
+  onGestureCancel: (...args:any) =>
     executeNavigationListeners("gestureCancel", ...args),
 };
 
-export const navigate = (routeName, params) => {
+export const navigate = (routeName:string, params?:any) => {
   if (isReadyRef.current && navigationRef && navigationRef.current) {
     // @ts-ignore
     navigationRef?.current?.navigate(routeName, params);

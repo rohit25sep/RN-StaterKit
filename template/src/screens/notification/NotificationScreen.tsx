@@ -5,7 +5,7 @@ import { useTheme } from "@react-navigation/native";
  * ? Local Imports
  */
 import createStyles from "./NotificationScreen.style";
-import Text from "@shared-components/text-wrapper/TextWrapper";
+import Text from "components/TextWrapper";
 
 interface ProfileScreenProps {}
 

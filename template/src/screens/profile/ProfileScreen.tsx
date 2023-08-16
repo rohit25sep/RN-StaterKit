@@ -5,7 +5,7 @@ import { useTheme } from "@react-navigation/native";
  * ? Local Imports
  */
 import createStyles from "./ProfileScreen.style";
-import Text from "@shared-components/text-wrapper/TextWrapper";
+import Text from "components/TextWrapper";
 import RNBounceable from "lib/bounceable/RNBounceable";
 
 interface ProfileScreenProps {}

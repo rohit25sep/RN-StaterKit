@@ -5,7 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import createStyles from "./HomeScreen.style";
 import CardItem from "./components/card-item/CardItem";
 
-import Text from "@shared-components/text-wrapper/TextWrapper";
+import Text from "components/TextWrapper";
 import fonts from "@fonts";
 import { localStrings } from "shared/localization";
 
