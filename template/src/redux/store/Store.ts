@@ -6,9 +6,9 @@ import {
 
 import { persistStore, persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
-import accountReducer from "../reducers/AccountReducer";
 import themeReducer from "../reducers/ThemeReducer";
 import reduxStorage from "core/redux-storage";
+import accountReducer from "redux/reducers/accountReducer";
 const middleware = applyMiddleware(thunk);
 
 const reducers = combineReducers({
