@@ -10,6 +10,7 @@ import {
  * ? Local Imports
  */
 import styles, { _setColor, _setFontFamily } from "../../common/RNText.style";
+import { getTestID } from "utils";
 
 type CustomTextStyleProp = StyleProp<TextStyle> | Array<StyleProp<TextStyle>>;
 

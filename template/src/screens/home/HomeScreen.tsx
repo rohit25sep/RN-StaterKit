@@ -5,9 +5,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import createStyles from "./HomeScreen.style";
 import CardItem from "./components/card-item/CardItem";
 
-import Text from "components/TextWrapper";
+import CustomText from "components/TextWrapper";
 import fonts from "@fonts";
 import { localStrings } from "shared/localization";
+import LocalString from "shared/localization/localEnums";
 
 interface HomeScreenProps {
   userData: any;
@@ -32,15 +33,15 @@ const HomeScreen = (props: HomeScreenProps) => {
 
   const Welcome = () => (
     <>
-      <Text h1 bold color={colors.text}>
-        {localStrings.getString("boilerPlateHeader")}
-      </Text>
-      <Text
+      <CustomText h1 bold color={colors.text}>
+        {localStrings.getString(LocalString.boilerPlateHeader)}
+      </CustomText>
+      <CustomText
         fontFamily={fonts.montserrat.lightItalic}
         color={colors.placeholder}
       >
-        {localStrings.getString("welcomeBack")}
-      </Text>
+        {localStrings.getString(LocalString.welcomeBack)}
+      </CustomText>
     </>
   );
 

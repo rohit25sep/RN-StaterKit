@@ -5,7 +5,7 @@ import { useTheme } from "@react-navigation/native";
  * ? Local Imports
  */
 import createStyles from "./CardItem.style";
-import Text from "components/TextWrapper";
+import CustomText from "components/TextWrapper";
 import RNBounceable from "lib/bounceable/RNBounceable";
 
 type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
@@ -24,12 +24,12 @@ const CardItem: React.FC<ICardItemProps> = ({ style, data, onPress }) => {
 
   const Header = () => (
     <>
-      <Text h4 bold color={colors.text}>
+      <CustomText h4 bold color={colors.text}>
         {name}
-      </Text>
-      <Text h5 color={colors.placeholder} style={styles.descriptionTextStyle}>
+      </CustomText>
+      <CustomText h5 color={colors.placeholder} style={styles.descriptionTextStyle}>
         {email}
-      </Text>
+      </CustomText>
     </>
   );
 

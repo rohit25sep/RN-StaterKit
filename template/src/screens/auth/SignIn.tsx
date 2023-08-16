@@ -12,11 +12,12 @@ import Glyphs from "assets/Glyphs";
 import createStyles from "./styles/SignInStyle";
 import * as NavigationService from "@navigation";
 import { SCREENS } from "@shared-constants";
-import RNText from "components/RNText/RNText";
+import CustomText from "components/TextWrapper";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "redux/store/Store";
 import { setAppTheme } from "redux/actions/ThemeAction";
 import Button from "components/button";
+import LocalString from "shared/localization/localEnums";
 
 const SignInScreen = () => {
   const theme = useTheme();
@@ -37,35 +38,35 @@ const SignInScreen = () => {
             <TextInput
               style={styles.input}
               placeholderTextColor={colors.text}
-              placeholder={localStrings.getString("placeholderEmail")}
+              placeholder={localStrings.getString(LocalString.placeholderEmail)}
             />
             <TextInput
               style={styles.password}
               placeholderTextColor={colors.text}
-              placeholder={localStrings.getString("placeholderPassword")}
+              placeholder={localStrings.getString(LocalString.placeholderPassword)}
             />
-            <RNText
+            <CustomText
               h3
               color={colors.text}
               style={styles.forgotPasswordText}
               onPress={() => Alert.alert("Hi")}
             >
-              {localStrings.getString("forgotPassword")}
-            </RNText>
+              {localStrings.getString(LocalString.forgotPassword)}
+            </CustomText>
           </View>
         </View>
 
       </View>
       <Button
-        text={localStrings.getString("login")}
+        text={localStrings.getString(LocalString.login)}
         onPress={() => NavigationService.navigate(SCREENS.HOME)}
       ></Button>
       <Button
-        text={localStrings.getString("changeTheme")}
+        text={localStrings.getString(LocalString.changeTheme)}
         onPress={() => dispatch(setAppTheme(!isDarkMode))}
       ></Button>
        <Button
-        text={localStrings.getString("changeLanguage")}
+        text={localStrings.getString(LocalString.changeLanguage)}
         onPress={() =>  localStrings.setLanguage("en")}
       ></Button>
     </SafeAreaView>

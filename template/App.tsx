@@ -9,6 +9,7 @@ import { useNetInfo } from "@react-native-community/netinfo";
 import { persistor, store } from "redux/store/Store";
 import { PersistGate } from "redux-persist/integration/react";
 import { isAndroid } from "@lib";
+import StatusCode from "core/StatusCode";
 
 LogBox.ignoreAllLogs();
 
@@ -17,7 +18,7 @@ const App = () => {
   const isDarkMode = scheme === "dark";
   const netInfo = useNetInfo({
     reachabilityUrl: "https://clients3.google.com/generate_204",
-    reachabilityTest: async (response) => response.status === 204,
+    reachabilityTest: async (response) => response.status === StatusCode.SuccessNoContent,
     reachabilityLongTimeout: 60 * 1000,
     reachabilityShortTimeout: 5 * 1000,
     reachabilityRequestTimeout: 15 * 1000,
@@ -39,7 +40,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate persistor={persistor}>
         <Navigation />
       </PersistGate>
     </Provider>

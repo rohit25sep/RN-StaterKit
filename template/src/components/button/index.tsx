@@ -9,7 +9,6 @@ const TouchableOpacityMultipleTapHandler = multipleTapHandler(TouchableWithoutFe
 export interface ButtonProps {
   text: string;
   onPress: () => Promise<void> | any;
-  testID?: string;
   buttonColor?: string;
   style?: string;
 }
@@ -19,10 +18,9 @@ const Button = (props: ButtonProps) => {
   const { colors } = theme;
   return (
     <TouchableOpacityMultipleTapHandler
-      fsClass="fs-unmask"
       accessibilityRole="button"
       onPress={props.onPress}
-      testID={props.testID || getTestID(props.text)}>
+      testID={getTestID(props.text.replace(/ /g, ""))}>
       <View style={styles(colors).btnContainerStyle}>
         <RNText color={colors.buttonTextColor} h3>{props.text}</RNText>
       </View>
