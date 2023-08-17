@@ -18,7 +18,7 @@ const reducers = combineReducers({
 
 //* white list only those reducers which needs to be stored locally.
 const persistConfig = {
-  key: "@successive",
+  key: "@RNTypescriptBoilerplate",
   storage: reduxStorage,
   whitelist: ["themeReducer"],
 };

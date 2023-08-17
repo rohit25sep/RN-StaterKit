@@ -7,7 +7,7 @@ export const generateRandomNumber = (min: number, max: number) => {
 };
 
 export function getTestID(testID: string) {
-  const appPrefix = 'successive';
+  const appPrefix = 'RNTypescriptBoilerplate';
   if (!testID) {
     return 'undefined';
   }
