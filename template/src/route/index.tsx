@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "react-native-dynamic-vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { isReadyRef, navigationRef } from "@navigation";
@@ -15,7 +14,6 @@ import NotificationScreen from "@screens/notification/NotificationScreen";
 import { useSelector } from "react-redux";
 import { RootState } from "redux/store/Store";
 import SignInViewModel from "viewModel/SignInViewModel";
-import { Image } from "react-native";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const Navigation = () => {
