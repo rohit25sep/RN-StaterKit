@@ -58,6 +58,7 @@ package-lock.json
 *.jsbundle
 .env
 
+
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
