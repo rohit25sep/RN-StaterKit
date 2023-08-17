@@ -25,33 +25,6 @@ const Navigation = () => {
     return () => (isReadyRef.current = false);
   }, []);
 
-  // const renderTabIcon = (
-  //   route: any,
-  //   focused: boolean,
-  //   color: string,
-  //   size: number,
-  // ) => {
-  //   let iconName = "home";
-  //   switch (route.name) {
-  //     case SCREENS.HOME:
-  //       iconName = focused ? "home" : "home-outline";
-  //       break;
-  //     case SCREENS.SEARCH:
-  //       iconName = focused ? "search" : "search-outline";
-  //       break;
-  //     case SCREENS.NOTIFICATION:
-  //       iconName = focused ? "notifications" : "notifications-outline";
-  //       break;
-  //     case SCREENS.PROFILE:
-  //       iconName = focused ? "person" : "person-outline";
-  //       break;
-  //     default:
-  //       iconName = focused ? "home" : "home-outline";
-  //       break;
-  //   }
-  //   return <Image source={""} />;
-  // };
-
   const TabIcon = (    
     route: any,
     focused: boolean,

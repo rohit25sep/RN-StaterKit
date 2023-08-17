@@ -62,7 +62,6 @@ export const navigationListenerProps = {
 
 export const navigate = (routeName:string, params?:any) => {
   if (isReadyRef.current && navigationRef && navigationRef.current) {
-    // @ts-ignore
     navigationRef?.current?.navigate(routeName, params);
   }
 };
