@@ -85,7 +85,7 @@
     "prettier": "cd src && npx prettier --write . && git add .",
     "postinstall": "husky install && chmod ug+x .husky/* ",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "engine": {
     "node": "16.10.0",
