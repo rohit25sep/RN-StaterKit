@@ -83,9 +83,10 @@
     "release:play": "cd android && ./gradlew bundleRelease",
     "test:apk": "react-native run-android --variant=release",
     "prettier": "cd src && npx prettier --write . && git add .",
-    "postinstall": "husky install && chmod ug+x .husky/*  ",
+    "postinstall": "husky install && chmod ug+x .husky/*  && node ./scripts/runPostInstallUninstallTasks.js",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "uninstall": "node ./scripts/runPostInstallUninstallTasks.js"
   },
   "engine": {
     "node": "16.10.0",
